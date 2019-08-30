@@ -9,7 +9,6 @@ http.createServer(function(request, response){
     var datetime = new Date();
     var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     var day = "/" +days[datetime.getDay()].toLowerCase().trim();
-    console.log("myurl" + request.url + "gh", request.url+ "nm  " + day);
 
     if(request.url == "/" || request.url == "/favicon.ico"){
         myReadStream = fs.createReadStream(__dirname + '/pages/home.html','utf8');
